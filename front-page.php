@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-  this is a page.php
+  This is the front-page.php
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

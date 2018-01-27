@@ -14,17 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jfongdesign' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'jfongdesign' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'jfongdesign' ), 'jfongdesign', '<a href="http://jfong.design">Johnathan Fong</a>' );
-			?>
-		</div><!-- .site-info -->
+		This is the footer! Holy fuck. So much important.
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
