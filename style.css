@@ -606,7 +606,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 30px auto; }
 
 .page-links {
   clear: both;
@@ -620,6 +620,31 @@ a {
 
 .bypostauthor {
   display: block; }
+
+.site-content {
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px;
+  padding: 40px;
+  -webkit-box-shadow: 0px 10px 20px gray;
+          box-shadow: 0px 10px 20px gray; }
+
+.portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.portfolio-item-content {
+  width: 50%; }
+
+.portfolio-item-cover {
+  width: 50%;
+  padding: 25px; }
+
+.portfolio-item-cover-image {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
