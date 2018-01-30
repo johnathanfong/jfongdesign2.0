@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-  this is archive-portfolio_item.php
+  this is archive-portfolio.php
   
   <div id="primary" class="content-area">
     <main id="main" class="site-main">

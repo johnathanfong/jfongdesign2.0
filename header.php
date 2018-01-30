@@ -33,6 +33,6 @@
         ) );
       ?>
     </nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+  </header><!-- #masthead -->
 
 	<div id="content" class="site-content">
