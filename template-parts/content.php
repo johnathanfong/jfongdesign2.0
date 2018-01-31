@@ -26,7 +26,7 @@ this is content.php
     endif; ?>
   </header><!-- .entry-header -->
 
-  <?php jfongdesign_post_thumbnail(); ?>
+  <?php the_post_thumbnail('thumbnail'); ?>
 
   <div class="entry-content">
     <?php
