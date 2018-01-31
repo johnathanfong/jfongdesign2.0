@@ -30,6 +30,23 @@ get_header(); ?>
 
           <?php the_content(); ?>
 
+          <?php while( have_rows('images') ): the_row(); ?>
+            
+          <!-- Retrieve the Images Object -->
+
+          <?php $image = get_sub_field('image'); ?>
+
+          <!-- Prints the image -->
+          <img src="<?php echo $image['sizes']['thumbnail'] ?>">
+
+          <!-- If there's a caption, print the caption -->
+          <?php 
+            if (the_sub_field('image_caption')) : ?>
+          <p><?php the_sub_field('image_caption'); ?></p>
+          <?php endif; ?>
+
+          <?php endwhile; ?>
+
         <?php endwhile; // end of the loop. ?>
       </div>
     </div> <!-- /.innerWrapper -->
