@@ -35,34 +35,10 @@ get_header(); ?>
       <?php $samplePortfolio = new WP_Query( $args ); ?>
             <?php if ( $samplePortfolio->have_posts() ) {
                 while ( $samplePortfolio->have_posts() ) {
-                  $samplePortfolio->the_post();?>
+                  $samplePortfolio->the_post();
                   
-                  <div>
-                    <?php the_post_thumbnail('thumbnail'); ?>
-                  </div>
-                  <div>
-                    <a href="
-                      <?php 
-                        $postUrl = get_permalink();
-                        echo $postUrl;
-                        ?>"><h2><?php the_title(); ?></h2>
-                    </a>
-                    <p><?php the_field('client_name'); ?></p> 
-                    <?php the_field('summary'); ?>
-                    <a href="
-                      <?php 
-                        $postUrl = get_permalink();
-                        echo $postUrl;
-                        ?>">View Project</h2>
-                    </a>            
-                  </div>
-                
-                <?php
-                } //end while
-                wp_reset_postdata();
-              } //end if
-              ?>
-
+                  get_template_part( 'template-parts/content-portfolio' );  
+              }} ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

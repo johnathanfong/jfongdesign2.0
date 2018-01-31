@@ -48,6 +48,25 @@ get_header(); ?>
           <?php endwhile; ?>
 
         <?php endwhile; // end of the loop. ?>
+<ul>
+<?php
+  $postCategories = get_categories();
+  if ($postCategories) {
+    foreach($postCategories as $category) {
+      
+    ?>
+
+    <li>
+        <?php echo $category->name; ?>
+    </li>  
+    <?php
+    }
+  }
+?>
+  
+</ul>
+
+
       </div>
     </div> <!-- /.innerWrapper -->
   </div> <!-- /.section -->
