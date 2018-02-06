@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+  this is an archive.php
+  
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

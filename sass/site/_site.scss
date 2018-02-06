@@ -9,3 +9,10 @@
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+// All the site styling will go here until I can re-organize into partials.
+
+.main-content section{
+  width: 80%;
+  margin: 20px auto;
+}

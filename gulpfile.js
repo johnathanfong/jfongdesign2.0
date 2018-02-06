@@ -18,7 +18,7 @@ gulp.task('styles', () => {
 
 gulp.task('watch', () => {
   gulp.watch('./sass/**/*.scss', ['styles']);
-  gulp.watch('*.html', reload);
+  gulp.watch('*.php', reload);
 });
 
 gulp.task('browser-sync', () => {
