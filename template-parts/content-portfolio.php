@@ -45,7 +45,7 @@ this is content-portfolio.php
     ?>
       
     </ul>
-  
-  <?php
+
+  <?php 
   wp_reset_postdata();
 ?>

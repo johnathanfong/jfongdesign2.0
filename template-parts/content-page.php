@@ -14,7 +14,7 @@
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </header><!-- .entry-header -->
 
-  <?php the_post_thumbnail('thumbnail'); ?>
+  <?php if (!is_front_page()) { the_post_thumbnail('thumbnail'); } ?>
 
   <div class="entry-content">
     <?php
