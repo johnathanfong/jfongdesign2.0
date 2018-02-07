@@ -1,0 +1,25 @@
+.portfolio-archive {
+  position: relative;
+  top: 49px;
+}
+
+.portfolio-item {
+  display: flex;
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+.portfolio-image-wrapper {
+  width: 50%;
+  > img {
+    display: block;
+  }
+}
+
+.portfolio-item-description {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}

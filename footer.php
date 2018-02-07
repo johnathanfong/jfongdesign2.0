@@ -11,12 +11,9 @@
 
 ?>
 
-	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer">
 		This is the footer! Holy fuck. So much important.
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</footer>
 
 <?php wp_footer(); ?>
 

@@ -8,11 +8,10 @@
  */
 
 ?>
-this is content-portfolio.php
-    <div>
-      <?php the_post_thumbnail('thumbnail'); ?>
+    <div class="portfolio-image-wrapper">
+      <img src="<?php the_post_thumbnail_url(); ?>"/>
     </div>
-    <div>
+    <div class="portfolio-item-description">
       <a href="
         <?php 
           $postUrl = get_permalink();
@@ -27,25 +26,26 @@ this is content-portfolio.php
           echo $postUrl;
           ?>">View Project</h2>
       </a>            
-    </div>
-    <ul>
-    <?php
-      $postCategories = get_categories();
-      if ($postCategories) {
-        foreach($postCategories as $category) {
-          
-        ?>
+      <ul>
+      <?php
+        $postCategories = get_categories();
+        if ($postCategories) {
+          foreach($postCategories as $category) {
+            
+          ?>
 
-        <li>
-            <?php echo $category->name; ?>
-        </li>  
-        <?php
+          <li>
+              <?php echo $category->name; ?>
+          </li>  
+          <?php
+          }
         }
-      }
-    ?>
-      
-    </ul>
+      ?>
+        
+      </ul>
+    </div>
+
 
   <?php 
-  wp_reset_postdata();
-?>
+    wp_reset_postdata();
+  ?>

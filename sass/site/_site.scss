@@ -13,6 +13,73 @@
 // All the site styling will go here until I can re-organize into partials.
 
 .main-content section{
-  width: 80%;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 40px 60px;
+}
+
+.main-banner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  background: $color__black;
+  color: $color__white;
+  font-family: $font__main;
+  padding: 60px;
+  text-align: center;
+}
+
+h1.welcome {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.service {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  i {
+    font-size: 20px;
+    color: $color__accent;
+    margin-right: 15px;
+  }
+}
+
+.tools-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tool {
+  list-style: none;
+  margin-bottom: 30px;
+  width: 30%;
+  > span {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 30px;
+      color: $color__accent;
+      margin-right: 15px;
+    }
+  }
 }
