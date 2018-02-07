@@ -2,6 +2,7 @@
 	<div class="main-content">
     <header class="main-banner" style="
       background: url('<?php $headerImage = the_post_thumbnail_url();?>');
+      /*background: url('https://picsum.photos/1280/768/?random');*/
       background-size: cover;
       background-position: center; 
     ">
@@ -64,15 +65,21 @@
             </article>
         <?php }} 
       ?>
+      <a class="portfolio-view-all" href="
+        <?php 
+          $portfolioArchive = get_post_type_archive_link('portfolio');
+          echo $portfolioArchive;
+          ?>">View Portfolio
+      </a>
     </section>
-    <section class="contact">
+    <!-- <section class="contact">
       <h2 class="section-title">Get In Touch</h2>
-      <ul class="social-link">
+      <ul class="social-link-list">
         <?php
           while ( have_rows('social', 'option') ) : the_row();
         ?>
-          <li>
-            <a href="<?php the_sub_field('url'); ?>">
+          <li class="social-link">
+            <a href="<?php the_sub_field('url'); ?>" target="_blank">
               <?php the_sub_field('icon') ?>
             </a>
           </li>
@@ -80,7 +87,7 @@
           endwhile;
         ?>
       </ul>
-    </section>
+    </section> -->
 	</div>
 
 <?php
