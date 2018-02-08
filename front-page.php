@@ -1,22 +1,28 @@
 <?php get_header(); ?>
 	<div class="main-content">
-    <?php echo get_the_post_thumbnail(6);?>  
-    <section class="intro">
-			<?php
-  			while ( have_posts() ) : the_post();
-  				get_template_part( 'template-parts/content-page');
-        endwhile; // End of the loop.
-			?>
-    </section>
+    <header class="main-banner" style="
+      background: url('<?php $headerImage = the_post_thumbnail_url();?>');
+      /*background: url('https://picsum.photos/1280/768/?random');*/
+      background-size: cover;
+      background-position: center; 
+    ">
+      <div class="intro">
+        <h1 class="welcome"><?php the_title(); ?></h1>
+        <?php 
+          $post = get_post(); 
+          $content = apply_filters('the_content', $post->post_content); 
+          echo $content;  
+        ?> 
+      </div>
+    </header>
     <section class="services">
-      <h2>Services</h2>
-      <div>
+      <h2 class="section-title">Services</h2>
+      <div class="services-list">
         <?php
           while ( have_rows('services', 'option') ) : the_row();
         ?>
           <div class="service">
-            <?php the_sub_field('icon') ?>
-            <h3><?php the_sub_field('service') ?></h3>
+            <h3><?php the_sub_field('icon') ; the_sub_field('service') ?></h3>
             <p><?php the_sub_field('description') ?></p>
           </div>
                 
@@ -26,14 +32,13 @@
       </div>
     </section>
     <section class="toolbox">
-      <h2>Toolbox</h2>
-      <ul>
+      <h2 class="section-title">Toolbox</h2>
+      <ul class="tools-list">
         <?php
           while ( have_rows('tools', 'option') ) : the_row();
         ?>
           <li class="tool">
-            <?php the_sub_field('icon') ?>
-            <p><?php the_sub_field('name') ?></p>
+            <span><?php the_sub_field('icon'); the_sub_field('name') ?></span>
           </li>
                 
         <?php 
@@ -42,7 +47,7 @@
       </ul>
     </section>
     <section class="portfolio">
-      <h2>Recent Work</h2>
+      <h2 class="section-title">Recent Work</h2>
       <?php 
         $args = array(
           'post_type' => 'portfolio',
@@ -54,27 +59,18 @@
       <?php 
         if ( $samplePortfolio->have_posts() ) {
           while ( $samplePortfolio->have_posts() ) {
-            $samplePortfolio->the_post();
-            get_template_part( 'template-parts/content-portfolio' );
-          }
-        } 
+            $samplePortfolio->the_post();?>
+            <article class="portfolio-item">
+              <?php get_template_part( 'template-parts/content-portfolio' ); ?>  
+            </article>
+        <?php }} 
       ?>
-    </section>
-    <section class="contact">
-      <h2>Get In Touch</h2>
-      <ul class="social-link">
-        <?php
-          while ( have_rows('social', 'option') ) : the_row();
-        ?>
-          <li>
-            <a href="<?php the_sub_field('url'); ?>">
-              <?php the_sub_field('icon') ?>
-            </a>
-          </li>
+      <a class="portfolio-view-all" href="
         <?php 
-          endwhile;
-        ?>
-      </ul>
+          $portfolioArchive = get_post_type_archive_link('portfolio');
+          echo $portfolioArchive;
+          ?>">View Portfolio
+      </a>
     </section>
 	</div>
 

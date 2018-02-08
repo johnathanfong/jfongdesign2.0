@@ -16,20 +16,17 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
   <header id="masthead" class="site-header">
     <nav id="site-navigation" class="main-navigation">
       <?php
         wp_nav_menu();
       ?>
-    </nav><!-- #site-navigation -->
-  </header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+    </nav>
+  </header>

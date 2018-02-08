@@ -8,44 +8,40 @@
  */
 
 ?>
-this is content-portfolio.php
-    <div>
-      <?php the_post_thumbnail('thumbnail'); ?>
+    <div class="portfolio-image-wrapper">
+      <img src="<?php the_post_thumbnail_url(); ?>"/>
     </div>
-    <div>
+    <div class="portfolio-item-details">
+      <p class="portfolio-item-client"><?php the_field('client_name'); ?></p> 
       <a href="
         <?php 
           $postUrl = get_permalink();
           echo $postUrl;
-          ?>"><h2><?php the_title(); ?></h2>
+          ?>"><h2 class="portfolio-item-title"><?php the_title(); ?></h2>
       </a>
-      <p><?php the_field('client_name'); ?></p> 
-      <?php the_field('summary'); ?>
-      <a href="
+      <ul class="portfolio-item-categories">
+        <?php
+          $postCategories = get_categories();
+          if ($postCategories) {
+            foreach($postCategories as $category) {
+          ?>
+            <li class="portfolio-item-category">
+              <?php echo $category->name . ' / '; ?> 
+            </li>  
+          <?php }}
+        ?>
+      </ul>       
+      <p class="portfolio-item-description"><?php the_field('summary'); ?></p>
+      <a class="portfolio-item-view" href="
         <?php 
           $postUrl = get_permalink();
           echo $postUrl;
-          ?>">View Project</h2>
-      </a>            
-    </div>
-    <ul>
-    <?php
-      $postCategories = get_categories();
-      if ($postCategories) {
-        foreach($postCategories as $category) {
-          
-        ?>
-
-        <li>
-            <?php echo $category->name; ?>
-        </li>  
-        <?php
-        }
-      }
-    ?>
+          ?>">View Project
+      </a>
       
-    </ul>
+    </div>
+
 
   <?php 
-  wp_reset_postdata();
-?>
+    wp_reset_postdata();
+  ?>

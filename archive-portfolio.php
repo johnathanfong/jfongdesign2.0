@@ -7,34 +7,31 @@
  * @package jfongdesign
  */
 
-get_header(); ?>
+get_header(); ?>  
 
-  this is archive-portfolio.php
-  
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main">
-
+  <div class="archive-content">
     <?php
     if ( have_posts() ) : ?>
 
-      <header class="page-header">
-        <?php
-          the_archive_title( '<h1 class="page-title">', '</h1>' );
-          the_archive_description( '<div class="archive-description">', '</div>' );
+      <header class="archive-header">
+        <h1 class="archive-title"><?php echo str_replace('Archives: ','', get_the_archive_title()); ?></h1>
+        <?php 
+        $archiveDescription = get_the_archive_description();
+        $descriptionStriped = wp_strip_all_tags( $archiveDescription );
         ?>
-      </header><!-- .page-header -->
+        <p class="archive-description"><?php echo $descriptionStriped; ?></p>
+      </header>
 
       <?php
-      /* Start the Loop */
-      while ( have_posts() ) : the_post();
+        while ( have_posts() ) : the_post();
+      ?>
 
-        /*
-         * Include the Post-Format-specific template for the content.
-         * If you want to override this in a child theme, then include a file
-         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-         */
+    <article class="portfolio-item">
+      <?php
         get_template_part( 'template-parts/content-portfolio' );
-
+      ?>  
+    </article>
+    <?php 
       endwhile;
 
       the_posts_navigation();
@@ -45,9 +42,7 @@ get_header(); ?>
 
     endif; ?>
 
-    </main><!-- #main -->
-  </div><!-- #primary -->
+  </div>
 
 <?php
-get_sidebar();
 get_footer();

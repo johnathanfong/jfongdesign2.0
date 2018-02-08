@@ -13,6 +13,167 @@
 // All the site styling will go here until I can re-organize into partials.
 
 .main-content section{
-  width: 80%;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 40px 60px;
 }
+
+.main-banner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  width: 90%;
+  max-width: 1280px;
+  color: $color__white;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1.welcome {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.service {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  i {
+    font-size: 20px;
+    color: $color__accent;
+    margin-right: 15px;
+  }
+}
+
+.tools-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tool {
+  list-style: none;
+  margin-bottom: 30px;
+  width: 30%;
+  > span {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 30px;
+      color: $color__accent;
+      margin-right: 15px;
+    }
+  }
+}
+
+.social-link-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  list-style: none;
+  padding: 0;
+  > a > i {
+    font-size: 50px;
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.footer-social-link-list {
+  margin: 25px auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-link {
+  list-style: none;
+  padding: 0;
+  > a > i {
+    cursor: pointer;
+    font-size: 25px;
+    color: $color__white;
+    &:hover {
+      color: $color__accent;
+    }
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.site-footer {
+  background: $color__black;
+  color: $color__white;
+  text-align: center;
+  font-size: 12px;
+  padding: 30px 0;
+  span {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    a,
+    a:visited {
+      color: $color__white;
+      &:hover {
+        color: $color__accent;
+      }
+    }
+  }
+}
+
+// page.php
+
+.page-content {
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 40px 60px;
+}
+
+.content-title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.content-image-container {
+  background: $color__image-mat;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.content-image {
+  max-width: 100%;
+  display: block;
+  border: 4px solid $color__white;  
+}
+
