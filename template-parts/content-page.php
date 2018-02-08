@@ -8,11 +8,12 @@
  */
 
 ?>
-// this is content-page.php
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <h1 class="entry-title"><?php the_title(); ?></h1>
-  <?php { the_post_thumbnail('thumbnail'); } ?>
-  <div class="entry-content">
+  <h1 class="content-title"><?php the_title(); ?></h1>
+  <div class="content-image-container">
+   <img class="content-image" src="<?php the_post_thumbnail_url(); ?>"> 
+  </div>
+  <div class="content-description">
     <?php
       the_content();
 
