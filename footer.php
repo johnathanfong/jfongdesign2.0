@@ -12,25 +12,23 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-    <?php /*if (!is_front_page()) {*/ ?>
-      <section class="contact">
-        <h2>Get In Touch</h2>
-        <ul class="footer-social-link-list">
-          <?php
-            while ( have_rows('social', 'option') ) : the_row();
-          ?>
-            <li class="footer-social-link">
-              <a href="<?php the_sub_field('url'); ?>" target="_blank">
-                <?php the_sub_field('icon') ?>
-              </a>
-            </li>
-          <?php 
-            endwhile;
-          ?>
-        </ul>
-      </section>
-    <?php /*}*/?>
-    <div>
+    <section class="contact">
+      <h2 class="section-title footer">Get In Touch</h2>
+      <ul class="footer-social-link-list">
+        <?php
+          while ( have_rows('social', 'option') ) : the_row();
+        ?>
+          <li class="footer-social-link">
+            <a href="<?php the_sub_field('url'); ?>" target="_blank">
+              <?php the_sub_field('icon') ?>
+            </a>
+          </li>
+        <?php 
+          endwhile;
+        ?>
+      </ul>
+    </section>
+    <div class="copyright">
   		<span>
         Copyright &copy; Johnathan Fong 2018 All Rights Reserved
       </span> 

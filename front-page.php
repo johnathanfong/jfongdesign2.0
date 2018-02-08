@@ -22,7 +22,7 @@
           while ( have_rows('services', 'option') ) : the_row();
         ?>
           <div class="service">
-            <h3><?php the_sub_field('icon') ; the_sub_field('service') ?></h3>
+            <h3 class="service-title"><?php the_sub_field('icon') ; the_sub_field('service') ?></h3>
             <p><?php the_sub_field('description') ?></p>
           </div>
                 

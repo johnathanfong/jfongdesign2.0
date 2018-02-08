@@ -1,0 +1,25 @@
+// MEDIA QUERIES
+.main-content section,
+.page-content,
+.archive-content,
+.single-portfolio-content {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    margin: 20px auto;
+    padding: 20px 0;
+  }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    margin: 5px auto;
+    padding: 5px 0;
+    text-align: center;
+  }
+}
+
+.section-title,
+.archive-title,
+.single-portfolio-title,
+.content-title {
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
