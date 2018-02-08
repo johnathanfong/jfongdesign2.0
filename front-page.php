@@ -72,22 +72,6 @@
           ?>">View Portfolio
       </a>
     </section>
-    <!-- <section class="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <ul class="social-link-list">
-        <?php
-          while ( have_rows('social', 'option') ) : the_row();
-        ?>
-          <li class="social-link">
-            <a href="<?php the_sub_field('url'); ?>" target="_blank">
-              <?php the_sub_field('icon') ?>
-            </a>
-          </li>
-        <?php 
-          endwhile;
-        ?>
-      </ul>
-    </section> -->
 	</div>
 
 <?php

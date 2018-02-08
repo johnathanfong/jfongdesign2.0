@@ -9,16 +9,18 @@
 
 get_header(); ?>  
 
-  <div class="portfolio-archive">
+  <div class="archive-content">
     <?php
     if ( have_posts() ) : ?>
 
-      <header class="page-header">
-        <?php
-          the_archive_title( '<h1 class="page-title">', '</h1>' );
-          the_archive_description( '<div class="archive-description">', '</div>' );
+      <header class="archive-header">
+        <h1 class="archive-title"><?php echo str_replace('Archives: ','', get_the_archive_title()); ?></h1>
+        <?php 
+        $archiveDescription = get_the_archive_description();
+        $descriptionStriped = wp_strip_all_tags( $archiveDescription );
         ?>
-      </header><!-- .page-header -->
+        <p class="archive-description"><?php echo $descriptionStriped; ?></p>
+      </header>
 
       <?php
         while ( have_posts() ) : the_post();
@@ -40,7 +42,7 @@ get_header(); ?>
 
     endif; ?>
 
-  </div><!-- #primary -->
+  </div>
 
 <?php
 get_footer();
