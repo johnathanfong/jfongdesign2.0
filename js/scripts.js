@@ -24,8 +24,7 @@ $j(window).scroll(function() {
     if ( $j(window).scrollTop() >= bannerHeight ) {
         console.log('past the banner');
         $j('#toggle').addClass('past-banner');
-        
-    //Otherwise remove inline styles and thereby revert to original stying
+
     } else {
         $j('#toggle').removeClass('past-banner');
 
