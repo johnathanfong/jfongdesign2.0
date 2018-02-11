@@ -2,17 +2,19 @@
 	<div class="main-content">
     <header class="main-banner" style="
       background: url('<?php $headerImage = the_post_thumbnail_url();?>');
-      /*background: url('https://picsum.photos/1280/768/?random');*/
       background-size: cover;
       background-position: center; 
     ">
       <div class="intro">
         <h1 class="welcome"><?php the_title(); ?></h1>
-        <?php 
-          $post = get_post(); 
-          $content = apply_filters('the_content', $post->post_content); 
-          echo $content;  
-        ?> 
+        <p class="page-description">
+          <?php 
+            $post = get_post(); 
+            $content = apply_filters('the_content', $post->post_content); 
+            $contentString = wp_strip_all_tags( $content );
+            echo $contentString; 
+          ?>
+        </p>
       </div>
     </header>
     <section class="services">
@@ -69,7 +71,7 @@
         <?php 
           $portfolioArchive = get_post_type_archive_link('portfolio');
           echo $portfolioArchive;
-          ?>">View Portfolio
+          ?>">View All Portfolio Items
       </a>
     </section>
 	</div>

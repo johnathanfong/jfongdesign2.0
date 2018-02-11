@@ -6,10 +6,10 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
+	font-size: $font__size-desktop;
 	line-height: $font__line-height-body;
   @media screen and (min-width: 320px) and (max-width: 1023px) {
-    font-size: 12px;
+    font-size: $font__size-mobile;
   }
 }
 

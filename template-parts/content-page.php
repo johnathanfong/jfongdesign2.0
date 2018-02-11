@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <h1 class="content-title"><?php the_title(); ?></h1>
+  <h1 class="page-title"><?php the_title(); ?></h1>
   <div class="content-image-container">
    <img class="content-image" src="<?php the_post_thumbnail_url(); ?>"> 
   </div>

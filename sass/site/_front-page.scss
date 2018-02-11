@@ -1,0 +1,125 @@
+@import '../variables-site/responsive';
+
+// CSS for front-page.php
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-banner {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  @media #{$isMobile} {
+    margin-bottom: 30px;
+  }
+}
+
+.intro {
+  width: 90%;
+  max-width: 1280px;
+  color: $color__white;
+  font-size: 16px;
+}
+
+h1.welcome {
+  text-transform: uppercase;
+  font-size: 115px;
+  letter-spacing: 10px;
+  margin-bottom: 40px;
+  @media #{$isTablet} {
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  @media #{$isMobile} {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+}
+
+.section-title {
+  font-size: 60px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @media #{$upToDesktop} {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media #{$upToDesktop} {
+    flex-direction: column;
+  }
+}
+.service {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  @media #{$upToDesktop} {
+    width: 100%;
+    margin: 15px auto;
+  }
+}
+
+.service-title {
+  i {
+    font-size: 20px;
+    color: $color__accent;
+    margin-right: 15px;
+  }
+}
+
+.tools-list {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tool {
+  list-style: none;
+  margin-bottom: 30px;
+  width: calc(25% - 10px);
+  > span {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 30px;
+      color: $color__accent;
+      margin-right: 15px;
+    }
+  }
+  @media #{$isMobile} {
+    width: calc(50% - 10px);
+  }
+}
+
+section.contact,
+.copyright, {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  @media #{$isMobile} {
+    display: block;
+  }
+}
+
+section.contact {
+  margin-bottom: 30px;
+  @media #{$isMobile} {
+    margin-bottom: 0;
+  }
+}

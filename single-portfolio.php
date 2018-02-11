@@ -1,11 +1,5 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -13,12 +7,12 @@
  */
 get_header(); ?>
   
-  <div class="single-portfolio-content">
+  <div class="page-content">
   
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <header class="single-portfolio-header">
+    <header class="page-header">
       <p class="single-portfolio-client"><?php the_field('client_name'); ?></p> 
-      <h1 class="single-portfolio-title"><?php the_title(); ?></h1>
+      <h1 class="page-title"><?php the_title(); ?></h1>
       <ul class="single-portfolio-categories">
         <?php
           $postCategories = get_categories();
@@ -32,7 +26,7 @@ get_header(); ?>
           } //end if($postCategories)
         ?>
       </ul>
-      <p class="single-portfolio-summary">
+      <p class="page-description">
         <?php the_field('summary'); ?>
       </p>
     </header>
@@ -46,13 +40,13 @@ get_header(); ?>
         <?php } ?>
       </div>
       <!-- portfolio item description -->
-      <article class="single-portfolio-description">
+      <article id="single-portfolio-description">
         <?php the_content(); ?>
       </article>
 
       <!-- portfolio item images (optional) -->
       <?php if(have_rows('images')) : ?>
-        <article class="single-portfolio-gallery">
+        <article id="single-portfolio-gallery">
           <?php while(have_rows('images')) : the_row(); ?>
               <div class="single-portfolio-image-container">
                 <span class="single-portfolio-image-wrapper">
@@ -77,11 +71,13 @@ get_header(); ?>
     <?php 
       endwhile; //have_posts();
     ?>
-    <a class="portfolio-view-all" href="
-      <?php 
-        $portfolioArchive = get_post_type_archive_link('portfolio');
-        echo $portfolioArchive;
-        ?>">Return to Portfolio
-    </a>
+    <div id="page-footer">
+      <a class="portfolio-view-all" href="
+        <?php 
+          $portfolioArchive = get_post_type_archive_link('portfolio');
+          echo $portfolioArchive;
+          ?>">Return to Portfolio
+      </a>
+    </div>
   </div>
 <?php get_footer(); ?>

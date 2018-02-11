@@ -12,29 +12,31 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-    <section class="contact">
-      <h2 class="section-title footer">Get In Touch</h2>
-      <ul class="footer-social-link-list">
-        <?php
-          while ( have_rows('social', 'option') ) : the_row();
-        ?>
-          <li class="footer-social-link">
-            <a href="<?php the_sub_field('url'); ?>" target="_blank">
-              <?php the_sub_field('icon') ?>
-            </a>
-          </li>
-        <?php 
-          endwhile;
-        ?>
-      </ul>
-    </section>
-    <div class="copyright">
-  		<span>
-        Copyright &copy; Johnathan Fong 2018 All Rights Reserved
-      </span> 
-      <span>
-        Icons courtesy of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> & <a href="http://konpa.github.io/devicon/" target="_blank">Devicon</a>
-      </span>
+    <div class="footer-content">
+      <section class="contact">
+        <h2 class="section-title footer">Get In Touch</h2>
+        <ul class="social-links">
+          <?php
+            while ( have_rows('social', 'option') ) : the_row();
+          ?>
+            <li class="social-link">
+              <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                <?php the_sub_field('icon') ?>
+              </a>
+            </li>
+          <?php 
+            endwhile;
+          ?>
+        </ul>
+      </section>
+      <div class="copyright-info">
+    		<span>
+          Copyright &copy; Johnathan Fong 2018 All Rights Reserved
+        </span> 
+        <span>
+          Icons courtesy of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> & <a href="http://konpa.github.io/devicon/" target="_blank">Devicon</a>
+        </span>
+      </div>
     </div>
 	</footer>
 

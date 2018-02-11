@@ -1,3 +1,5 @@
+@import '../variables-site/responsive';
+
 nav#site-navigation {
   opacity: 0;
   visibility: hidden;
@@ -24,45 +26,26 @@ nav#site-navigation {
     ul {
       list-style: none;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin: 0;
       padding: 30px 0;
       li {
         display: inline-block;
-        padding: 0 15px;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 14px;
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
       }
     }
   }
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
-
 .toggle-container {
   justify-content: flex-end;
   position: fixed;
-  padding: 30px;
+  padding: 30px calc(5% - 30px);
   top: 0;
   right: 0;
   z-index: 20;
@@ -74,6 +57,7 @@ nav#site-navigation {
     width: 100%;
     display: none;
     visibility: hidden;
+    padding: 30px 5%;
   }
 }
 
@@ -135,7 +119,7 @@ nav#site-navigation {
   background-color: $color__black;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media #{$isMobile} {
   .main-navigation {
     height: 100vh;
     background: $color__black;
@@ -143,7 +127,8 @@ nav#site-navigation {
       height: 100%;
       ul {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         height: 100%;
         padding: 0;
         li {
