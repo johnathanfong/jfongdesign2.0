@@ -886,6 +886,98 @@ section.contact {
     section.contact {
       margin-bottom: 0; } }
 
+.single-portfolio-content {
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 40px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.single-portfolio-client {
+  font-size: 20px;
+  color: #97d1d1;
+  margin: 0 0 20px 0; }
+
+.single-portfolio-summary {
+  font-size: 16px;
+  margin: 20px 0 0 0; }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    .single-portfolio-summary {
+      font-size: 14px; } }
+
+.single-portfolio-categories {
+  margin: 0 0 30px 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #ccc; }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    .single-portfolio-categories {
+      font-size: 10px; } }
+
+.single-portfolio-category {
+  list-style: none;
+  padding: 0 2px;
+  text-transform: uppercase; }
+
+.single-portfolio-feature-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #efefef;
+  margin: 30px 0;
+  padding: 20px; }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    .single-portfolio-feature-image-container {
+      padding: 10px; } }
+
+.single-portfolio-feature-image {
+  display: block;
+  border: 4px solid #fff; }
+
+article#single-portfolio-description,
+article#single-portfolio-gallery {
+  width: 100%; }
+
+.single-portfolio-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #efefef;
+  margin: 30px 0;
+  padding: 20px; }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    .single-portfolio-image-container {
+      padding: 10px; } }
+
+.single-portfolio-image {
+  max-width: 100%;
+  display: block;
+  border: 4px solid #fff; }
+
 .portfolio-item {
   background: #efefef;
   margin-bottom: 30px;
@@ -1107,98 +1199,6 @@ section.contact {
   display: block;
   border: 4px solid #fff; }
 
-.single-portfolio-content {
-  width: 90%;
-  max-width: 1280px;
-  margin: 40px auto;
-  padding: 40px 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.single-portfolio-client {
-  font-size: 20px;
-  color: #97d1d1;
-  margin: 0 0 20px 0; }
-
-.single-portfolio-summary {
-  font-size: 16px;
-  margin: 20px 0 0 0; }
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
-    .single-portfolio-summary {
-      font-size: 14px; } }
-
-.single-portfolio-categories {
-  margin: 0 0 30px 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #ccc; }
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
-    .single-portfolio-categories {
-      font-size: 10px; } }
-
-.single-portfolio-category {
-  list-style: none;
-  padding: 0 2px;
-  text-transform: uppercase; }
-
-.single-portfolio-feature-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #efefef;
-  margin: 30px 0;
-  padding: 20px; }
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
-    .single-portfolio-feature-image-container {
-      padding: 10px; } }
-
-.single-portfolio-feature-image {
-  display: block;
-  border: 4px solid #fff; }
-
-article#single-portfolio-description,
-article#single-portfolio-gallery {
-  width: 100%; }
-
-.single-portfolio-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #efefef;
-  margin: 30px 0;
-  padding: 20px; }
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
-    .single-portfolio-image-container {
-      padding: 10px; } }
-
-.single-portfolio-image {
-  max-width: 100%;
-  display: block;
-  border: 4px solid #fff; }
-
 .content-image-container {
   background: #efefef;
   margin: 30px 0;
@@ -1273,7 +1273,7 @@ article#single-portfolio-gallery {
 ## Global Styles
 --------------------------------------------------------------*/
 .page-content {
-  padding: 60px 0;
+  padding: 81px 0 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1284,12 +1284,12 @@ article#single-portfolio-gallery {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    .page-content {
-      padding: 30px 0x; } }
   .page-content article {
     width: 90%;
     max-width: 1280px; }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .page-content {
+      padding: 81px 0 30px 0x; } }
 
 .page-header {
   width: 90%;
@@ -1302,7 +1302,8 @@ article#single-portfolio-gallery {
   letter-spacing: 5px; }
   @media screen and (min-width: 320px) and (max-width: 1023px) {
     .page-title {
-      font-size: 30px; } }
+      font-size: 30px;
+      margin-bottom: 20px; } }
 
 .page-description {
   font-size: 20px;
