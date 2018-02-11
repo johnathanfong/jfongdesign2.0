@@ -12,7 +12,7 @@ $j(function(){
 
   $j('.menu-toggle').on('click', function(e) {
     $j('nav#site-navigation').toggleClass("show");    
-    $j('#toggle').toggleClass("close");
+    $j('button#toggle').toggleClass("close");
     e.preventDefault();
   });
 });
