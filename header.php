@@ -29,4 +29,7 @@
         wp_nav_menu();
       ?>
     </nav>
+    <button id="toggle" class="menu-toggle">
+      <span class="menu-toggle-icon"></span>
+    </button>
   </header>

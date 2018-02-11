@@ -119,7 +119,7 @@ add_action( 'widgets_init', 'jfongdesign_widgets_init' );
 function jfongdesign_scripts() {
 	wp_enqueue_style( 'jfongdesign-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jfongdesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'jfongdesign-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'jfongdesign-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
