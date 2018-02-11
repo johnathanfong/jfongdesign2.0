@@ -9,7 +9,13 @@
 
 ?>
     <div class="portfolio-image-wrapper">
-      <img src="<?php the_post_thumbnail_url(); ?>"/>
+      <a href="
+        <?php 
+          $postUrl = get_permalink();
+          echo $postUrl;
+          ?>">
+          <img src="<?php the_post_thumbnail_url(); ?>"/>
+        </a>
     </div>
     <div class="portfolio-item-details">
       <p class="portfolio-item-client"><?php the_field('client_name'); ?></p> 

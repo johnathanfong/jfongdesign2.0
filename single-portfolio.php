@@ -71,11 +71,13 @@ get_header(); ?>
     <?php 
       endwhile; //have_posts();
     ?>
-    <a class="portfolio-view-all" href="
-      <?php 
-        $portfolioArchive = get_post_type_archive_link('portfolio');
-        echo $portfolioArchive;
-        ?>">Return to Portfolio
-    </a>
+    <div id="page-footer">
+      <a class="portfolio-view-all" href="
+        <?php 
+          $portfolioArchive = get_post_type_archive_link('portfolio');
+          echo $portfolioArchive;
+          ?>">Return to Portfolio
+      </a>
+    </div>
   </div>
 <?php get_footer(); ?>

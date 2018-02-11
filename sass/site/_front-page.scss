@@ -14,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media #{$upToDesktop} {
+  margin-bottom: 60px;
+  @media #{$isMobile} {
     margin-bottom: 30px;
   }
 }
@@ -29,15 +29,17 @@
 
 h1.welcome {
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 115px;
   letter-spacing: 10px;
+  margin-bottom: 40px;
   @media #{$isTablet} {
     font-size: 60px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
   @media #{$isMobile} {
     font-size: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 }
 
@@ -45,9 +47,10 @@ h1.welcome {
   font-size: 60px;
   margin-bottom: 40px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   @media #{$upToDesktop} {
     font-size: 30px;
+    letter-spacing: 1px;
   }
 }
 

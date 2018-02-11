@@ -11,7 +11,8 @@
           <?php 
             $post = get_post(); 
             $content = apply_filters('the_content', $post->post_content); 
-            echo $content;  
+            $contentString = wp_strip_all_tags( $content );
+            echo $contentString; 
           ?>
         </p>
       </div>
@@ -70,7 +71,7 @@
         <?php 
           $portfolioArchive = get_post_type_archive_link('portfolio');
           echo $portfolioArchive;
-          ?>">View Portfolio
+          ?>">View All Portfolio Items
       </a>
     </section>
 	</div>

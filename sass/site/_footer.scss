@@ -2,16 +2,46 @@
 
 // CSS for footer.php
 
-.footer-social-link-list {
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background: $color__black;
+  font-size: 12px;
+  color: $color__white;
+  @media #{$isMobile} {
+    padding-bottom: 81px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1280px;
+}
+
+section.contact {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.section-title.footer {
+  margin: 0;
+  font-size: 30px;
+}
+
+.social-links {
   margin: 5px 0 0 25px;
   padding: 0;
   display: flex;
   @media #{$isMobile} {
-    margin: 25px auto;
+    margin: 25px 0 0 0;
   }
 }
 
-.footer-social-link {
+.social-link {
   list-style: none;
   padding: 0;
   > a > i {
@@ -27,17 +57,7 @@
   }
 }
 
-.site-footer {
-  background: $color__black;
-  color: $color__white;
-  font-size: 12px;
-  padding: 30px 0;
-  @media #{$isMobile} {
-    padding-bottom: 120px;
-  }
-}
-
-.copyright {
+.copyright-info {
   span {
     &:not(:last-child) {
       margin-right: 30px;
