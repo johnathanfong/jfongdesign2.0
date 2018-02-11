@@ -1,5 +1,4 @@
-// @import "../layout/content-sidebar";
-// @import "../layout/sidebar-content";
+@import '../variables-site/responsive';
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -16,10 +15,20 @@
 @import "archive";
 @import "content-portfolio";
 @import "single-portfolio";
-@import "page";
+@import "content-page";
 
 /*--------------------------------------------------------------
 ## Global Styles
 --------------------------------------------------------------*/
 
+.page-content {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
 
+section {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1280px;
+}

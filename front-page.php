@@ -2,7 +2,6 @@
 	<div class="main-content">
     <header class="main-banner" style="
       background: url('<?php $headerImage = the_post_thumbnail_url();?>');
-      /*background: url('https://picsum.photos/1280/768/?random');*/
       background-size: cover;
       background-position: center; 
     ">

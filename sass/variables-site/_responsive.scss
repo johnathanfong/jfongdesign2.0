@@ -1,6 +1,6 @@
 // Media Query Variables
 
-$isMobile: '@media screen and (min-width: 320px) and (max-width: 767px)';
-$isTablet: '@media screen and (min-width: 768px) and (max-width: 1023px)';
-$isDesktop: '@media screen and (min-width: 1024px)';
-$upToDesktop: '@media screen and (min-width: 320px) and (max-width: 1023px)';
+$isMobile: 'screen and (min-width: 320px) and (max-width: 767px)';
+$isTablet: 'screen and (min-width: 768px) and (max-width: 1023px)';
+$isDesktop: 'screen and (min-width: 1024px)';
+$upToDesktop: 'screen and (min-width: 320px) and (max-width: 1023px)';

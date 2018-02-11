@@ -1,10 +1,10 @@
+@import '../variables-site/responsive';
+
 // CSS for front-page.php
 
 .main-content section{
   width: 90%;
   max-width: 1280px;
-  margin: 40px auto;
-  padding: 40px 60px;
 }
 
 .main-banner {
@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
+  @media #{$upToDesktop} {
     margin-bottom: 30px;
   }
 }
@@ -30,7 +30,7 @@ h1.welcome {
   text-transform: uppercase;
   font-size: 40px;
   letter-spacing: 10px;
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
+  @media #{$upToDesktop} {
     font-size: 20px;
     letter-spacing: 1px;
   }
@@ -44,7 +44,7 @@ h1.welcome {
   letter-spacing: 5px;
   &.footer {
     margin-bottom: 0px;
-    @media screen and (min-width: 320px) and (max-width: 767px) {
+    @media #{$isMobile} {
       margin-bottom: 10px;
     }
   }
@@ -54,7 +54,7 @@ h1.welcome {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
+  @media #{$upToDesktop} {
     flex-direction: column;
   }
 }
@@ -62,7 +62,7 @@ h1.welcome {
   width: 30%;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
+  @media #{$upToDesktop} {
     width: 100%;
     margin: 15px auto;
   }
@@ -96,7 +96,7 @@ h1.welcome {
       margin-right: 15px;
     }
   }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media #{$isMobile} {
     width: calc(50% - 10px);
   }
 }
@@ -108,14 +108,14 @@ section.contact,
   margin: 0 auto;
   display: flex;
   align-items: center;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media #{$isMobile} {
     display: block;
   }
 }
 
 section.contact {
   margin-bottom: 30px;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media #{$isMobile} {
     margin-bottom: 0;
   }
 }
@@ -124,7 +124,7 @@ section.contact {
   margin: 5px 0 0 25px;
   padding: 0;
   display: flex;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media #{$isMobile} {
     margin: 25px auto;
   }
 }
@@ -150,7 +150,7 @@ section.contact {
   color: $color__white;
   font-size: 12px;
   padding: 30px 0;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media #{$isMobile} {
     padding-bottom: 120px;
   }
 }
@@ -159,7 +159,7 @@ section.contact {
   span {
     &:not(:last-child) {
       margin-right: 30px;
-      @media screen and (min-width: 320px) and (max-width: 1023px) {
+      @media #{$upToDesktop} {
         margin-right:0;
       }
     }
@@ -171,7 +171,7 @@ section.contact {
       }
     }
   }
-  @media screen and (min-width: 320px) and (max-width: 1023px) {
+  @media #{$upToDesktop} {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

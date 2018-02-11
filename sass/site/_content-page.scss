@@ -1,11 +1,6 @@
-// CSS for page.php
+@import '../variables-site/responsive';
 
-.page-content {
-  width: 90%;
-  max-width: 1280px;
-  margin: 40px auto;
-  padding: 40px 60px;
-}
+// CSS for content-page.php
 
 .content-title {
   font-size: 30px;

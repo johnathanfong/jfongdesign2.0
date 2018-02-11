@@ -13,7 +13,7 @@
  */
 get_header(); ?>
   
-  <div class="single-portfolio-content">
+  <div class="page-content">
   
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <header class="single-portfolio-header">
