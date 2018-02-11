@@ -1,7 +1,18 @@
+nav#site-navigation {
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms ease-in-out;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transition: 200ms ease-in-out;
+  }
+}
+
 .main-navigation {
-  // z-index: 10;
-  // position: fixed;
-  // top: 0;
+  z-index: 10;
+  position: fixed;
+  top: 0;
   background: $color__white;
   display: flex;
   align-items: center;
@@ -46,4 +57,128 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.toggle-container {
+  justify-content: flex-end;
+  position: fixed;
+  padding: 30px;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  &.desktop {
+    display: flex;
+    visibility: visible;
+  }
+  &.mobile {
+    width: 100%;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// toggle button
+#toggle {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 20px;
+  outline: none;
+  padding: 0;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+#toggle span:after{
+  top: 10px;
+}
+#toggle span:before{
+  bottom: 10px;
+}
+#toggle span {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 2px;
+  background-color: $color__white;
+  transition: all 200ms ease-in-out;
+  border-radius: 2px;
+  backface-visibility: hidden;
+}
+
+#toggle.past-banner span,
+#toggle.past-banner span:after,
+#toggle.past-banner span:before {
+  background-color: $color__black;
+}
+
+/* on activation */
+#toggle.close span {
+  background-color: transparent;
+}
+#toggle.close span:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  background-color: $color__black;
+}
+#toggle.close span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  background-color: $color__black;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-navigation {
+    height: 100vh;
+    background: $color__black;
+    .menu-menu-1-container {
+      height: 100%;
+      ul {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        li {
+          font-size: 20px;
+          padding: 0;
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+          a {
+            color: $color__white;
+            &:hover {
+              color: $color__accent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .toggle-container {
+    top: initial;
+    bottom: 0;
+    background: rgba($color__black, 0.95);
+    &.desktop {
+      display: none;
+      visibility: hidden;
+    }
+    &.mobile {
+      display: flex;
+      visibility: visible;
+    }
+  }
+  #toggle.close span:before {
+    background-color: $color__white;
+  }
+  #toggle.close span:after {
+    background-color: $color__white;
+  }
 }

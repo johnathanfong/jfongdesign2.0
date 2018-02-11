@@ -18,6 +18,7 @@ gulp.task('styles', () => {
 
 gulp.task('watch', () => {
   gulp.watch('./sass/**/*.scss', ['styles']);
+  gulp.watch('./js/**/*.js', ['scripts']);
   gulp.watch('*.php', reload);
 });
 

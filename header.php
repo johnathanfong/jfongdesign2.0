@@ -29,4 +29,16 @@
         wp_nav_menu();
       ?>
     </nav>
+    <!-- desktop toggle -->
+    <div class="toggle-container desktop">
+      <button id="toggle" class="menu-toggle">
+        <span class="menu-toggle-icon"></span>
+      </button>
+    </div>
+    <!-- mobile toggle -->
+    <div class="toggle-container mobile">
+      <button id="toggle" class="menu-toggle">
+        <span class="menu-toggle-icon"></span>
+      </button>
+    </div>
   </header>
