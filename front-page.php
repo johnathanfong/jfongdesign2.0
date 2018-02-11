@@ -7,11 +7,13 @@
     ">
       <div class="intro">
         <h1 class="welcome"><?php the_title(); ?></h1>
-        <?php 
-          $post = get_post(); 
-          $content = apply_filters('the_content', $post->post_content); 
-          echo $content;  
-        ?> 
+        <p class="page-description">
+          <?php 
+            $post = get_post(); 
+            $content = apply_filters('the_content', $post->post_content); 
+            echo $content;  
+          ?>
+        </p>
       </div>
     </header>
     <section class="services">

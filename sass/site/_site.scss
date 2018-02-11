@@ -16,15 +16,47 @@
 @import "content-portfolio";
 @import "single-portfolio";
 @import "content-page";
+@import "footer";
 
 /*--------------------------------------------------------------
 ## Global Styles
 --------------------------------------------------------------*/
 
 .page-content {
-  padding: 60px;
+  padding: 60px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media #{$isMobile} {
+    padding: 30px 0x;
+  }
+  article {
+    width: 90%;
+    max-width: 1280px;
+  }
+}
+
+.page-header {
+  width: 90%;
+  max-width: 1280px;
+}
+
+.page-title {
+  font-size: 60px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  @media #{$upToDesktop} {
+    font-size: 30px;
+  }
+}
+
+.page-description {
+  font-size: 20px;
+  margin: 0;
+  @media #{$upToDesktop} {
+    font-size: 16px;
+  }
 }
 
 section {

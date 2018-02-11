@@ -9,38 +9,40 @@
 
 get_header(); ?>  
 
-  <div class="archive-content">
+  <div class="page-content">
     <?php
     if ( have_posts() ) : ?>
 
-      <header class="archive-header">
-        <h1 class="archive-title"><?php echo str_replace('Archives: ','', get_the_archive_title()); ?></h1>
+      <header class="page-header">
+        <h1 class="page-title"><?php echo str_replace('Archives: ','', get_the_archive_title()); ?></h1>
         <?php 
         $archiveDescription = get_the_archive_description();
         $descriptionStriped = wp_strip_all_tags( $archiveDescription );
         ?>
-        <p class="archive-description"><?php echo $descriptionStriped; ?></p>
+        <p class="page-description"><?php echo $descriptionStriped; ?></p>
       </header>
+      <section id="portfolio-items">
+        <?php
+          while ( have_posts() ) : the_post();
+        ?>
 
-      <?php
-        while ( have_posts() ) : the_post();
-      ?>
+      <article class="portfolio-item">
+        <?php
+          get_template_part( 'template-parts/content-portfolio' );
+        ?>  
+      </article>
+      <?php 
+        endwhile;
 
-    <article class="portfolio-item">
-      <?php
-        get_template_part( 'template-parts/content-portfolio' );
-      ?>  
-    </article>
-    <?php 
-      endwhile;
+        the_posts_navigation();
 
-      the_posts_navigation();
+      else :
 
-    else :
+        get_template_part( 'template-parts/content', 'none' );
 
-      get_template_part( 'template-parts/content', 'none' );
-
-    endif; ?>
+      endif; ?>
+        
+      </section>
 
   </div>
 

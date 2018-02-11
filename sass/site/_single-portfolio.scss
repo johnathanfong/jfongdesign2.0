@@ -11,19 +11,10 @@
   flex-direction: column;
 }
 
-.single-portfolio-header {
-}
-
 .single-portfolio-client {
   font-size: 20px;
   color: $color__accent;
   margin: 0 0 20px 0;
-}
-
-.single-portfolio-title {
-  font-size: 30px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
 }
 
 .single-portfolio-summary {
@@ -35,7 +26,7 @@
 }
 
 .single-portfolio-categories {
-  margin: 10px 0;
+  margin: 0 0 30px 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +57,11 @@
 .single-portfolio-feature-image {
   display: block;
   border: 4px solid $color__white;
+}
+
+article#single-portfolio-description,
+article#single-portfolio-gallery {
+  width: 100%;
 }
 
 .single-portfolio-image-container {
