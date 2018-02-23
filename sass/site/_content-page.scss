@@ -4,7 +4,7 @@
 
 .content-image-container {
   background: $color__image-mat;
-  margin: 30px 0;
+  margin: 10px 0;
   padding: 20px;
   @media #{$upToDesktop} {
     padding: 10px;
@@ -15,4 +15,28 @@
   max-width: 100%;
   display: block;
   border: 4px solid $color__white;  
+}
+
+// About Template (about.php)
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media #{$upToDesktop} {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.content-image-container.about {
+  @media #{$isDesktop} {
+    width: calc(50% - 10px);
+    margin: 0;
+  }
+}
+.content-description.about {
+  @media #{$isDesktop} {
+    width: calc(50% - 10px);
+  }
 }
