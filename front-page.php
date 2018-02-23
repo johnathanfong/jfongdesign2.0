@@ -4,6 +4,7 @@
       background: url('<?php $headerImage = the_post_thumbnail_url();?>');
       background-size: cover;
       background-position: center; 
+      background-attachment: fixed;
     ">
       <div class="intro">
         <h1 class="welcome"><?php the_title(); ?></h1>

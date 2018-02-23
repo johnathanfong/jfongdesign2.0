@@ -1090,7 +1090,7 @@ div#page-footer {
 
 .content-image-container {
   background: #efefef;
-  margin: 30px 0;
+  margin: 10px 0;
   padding: 20px; }
   @media screen and (min-width: 320px) and (max-width: 1023px) {
     .content-image-container {
@@ -1100,6 +1100,35 @@ div#page-footer {
   max-width: 100%;
   display: block;
   border: 4px solid #fff; }
+
+.about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    .about-me {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+@media screen and (min-width: 1024px) {
+  .content-image-container.about {
+    width: calc(50% - 10px);
+    margin: 0; } }
+
+@media screen and (min-width: 1024px) {
+  .content-description.about {
+    width: calc(50% - 10px); } }
 
 footer {
   display: -webkit-box;

@@ -26,11 +26,11 @@ get_header(); ?>
           while ( have_posts() ) : the_post();
         ?>
 
-      <article class="portfolio-item">
+      <div class="portfolio-item">
         <?php
           get_template_part( 'template-parts/content-portfolio' );
         ?>  
-      </article>
+      </div>
       <?php 
         endwhile;
 
